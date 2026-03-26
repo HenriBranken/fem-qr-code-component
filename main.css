@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* . . . . Color Scheme . . . . */
+  --col-bg: hsl(212, 45%, 89%);
+  --col-text: hsl(216, 15%, 48%);
+  --col-heading: hsl(218, 44%, 22%);
+  --col-surface: hsl(0, 0%, 100%);
+  /* . . . . Typography . . . . */
+  /* regular */
+  --text-body-size: 15px;
+  --text-body-weight: 400;
+  --text-body-line-height: 1.4;
+  --text-body-letter-spacing: 0.2px;
+  /* bold */
+  --text-head-size: 22px;
+  --text-head-weight: 700;
+  --text-head-line-height: 1.2;
+  --text-head-letter-spacing: 0px;
+  /* footnote */
+  --text-footnote-size: 10px;
+  /* . . . . Spacing . . . . */
+  --space-16: 16px;
+  --space-24: 24px;
+  /* . . . . border-radii . . . . */
+  --radius-sm: 10px;
+  --radius-lg: 20px;
+}
+
+html {
+  font-size: var(--text-body-size);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: var(--text-body-weight);
+  color: var(--col-text);
+  background-color: var(--col-bg);
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 var(--space-16);
+
+  display: grid;
+
+  place-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--text-head-size);
+  font-weight: var(--text-head-weight);
+  line-height: var(--text-head-line-height);
+  letter-spacing: var(--text-head-letter-spacing);
+  color: var(--col-heading);
+}
+
+.card {
+  width: min(100%, 320px); /*100% of available width of the parent.*/
+  /* width: 100%;  max-width: 320px; */
+  background-color: var(--col-surface);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  margin: auto;
+  padding: var(--space-16);
+  box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 0.0477);
+  text-align: center;
+}
+
+.card-text {
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+  letter-spacing: var(--text-body-letter-spacing);
+  color: var(--col-text);
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.card-body {
+  margin: var(--space-24) var(--space-16);
+}
+
+.card-title {
+  margin-bottom: var(--space-16);
+}
+
+.attribution {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  transform-origin: bottom left;
+  transform: rotate(90deg) translateX(-10px);
+
+  font-size: var(--text-footnote-size);
+  margin: 10px;
+}
+
+.attribution a {
+  color: var(--col-heading);
+}
+
+@media (max-width: 429px) {
+  .attribution {
+    display: none;
+  }
+}
