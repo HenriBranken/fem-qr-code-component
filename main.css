@@ -27,6 +27,10 @@
   /* . . . . border-radii . . . . */
   --radius-sm: 10px;
   --radius-lg: 20px;
+  /* . . . Shadow Effects . . . */
+  --shadow-y: 4px;
+  --shadow-blur: 4px;
+  --shadow-alpha: 25%;
 }
 
 html {
@@ -55,6 +59,8 @@ h1 {
   line-height: var(--text-head-line-height);
   letter-spacing: var(--text-head-letter-spacing);
   color: var(--col-heading);
+  text-shadow: 0 var(--shadow-y) var(--shadow-blur)
+    rgba(0, 0, 0, var(--shadow-alpha));
 }
 
 .card {
@@ -71,11 +77,15 @@ h1 {
 }
 
 .card-text {
+  margin: 0;
   font-size: var(--text-body-size);
   font-weight: var(--text-body-weight);
   line-height: var(--text-body-line-height);
   letter-spacing: var(--text-body-letter-spacing);
   color: var(--col-text);
+
+  text-shadow: 0 var(--shadow-y) var(--shadow-blur)
+    rgba(0, 0, 0, var(--shadow-alpha));
 }
 
 .card-img {
