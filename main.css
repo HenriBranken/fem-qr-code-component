@@ -123,4 +123,9 @@ h1 {
   .attribution {
     display: none;
   }
+
+  h1,
+  .card-text {
+    text-shadow: none;
+  }
 }
