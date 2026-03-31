@@ -2,7 +2,7 @@
 @import url("./tokens.css");
 
 html {
-  font-size: var(--text-body-size);
+  font-size: 100%;
 }
 
 body {
@@ -20,19 +20,20 @@ body {
   place-items: center;
 }
 
-h1 {
+h3 {
   margin: 0;
   font-size: var(--text-head-size);
   font-weight: var(--text-head-weight);
   line-height: var(--text-head-line-height);
   letter-spacing: var(--text-head-letter-spacing);
   color: var(--col-heading);
-  /* text-shadow: 0 var(--shadow-y) var(--shadow-blur)
-    rgba(0, 0, 0, var(--shadow-alpha)); */
 }
 
 .card {
-  width: min(100%, 320px); /*100% of available width of the parent.*/
+  width: min(
+    100%,
+    var(--card-max-width)
+  ); /*100% of available width of the parent.*/
   /* width: 100%;  max-width: 320px; */
   background-color: var(--col-surface);
   display: flex;
@@ -40,7 +41,8 @@ h1 {
   border-radius: var(--radius-lg);
   margin: auto;
   padding: var(--space-16);
-  box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 0.0477);
+  box-shadow: 0 var(--card-shadow-y) var(--card-shadow-blur) 0px
+    rgba(0, 0, 0, 0.0477);
   text-align: center;
 }
 
@@ -87,7 +89,7 @@ h1 {
   color: var(--col-heading);
 }
 
-@media (max-width: 429px) {
+@media (max-width: 26.8125em) {
   .attribution {
     display: none;
   }

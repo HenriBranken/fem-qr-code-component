@@ -6,28 +6,32 @@
   --col-surface: hsl(0, 0%, 100%);
 
   /* Typography */
-  --text-body-size: 15px;
+  --text-body-size: 0.9375rem;
   --text-body-weight: 400;
   --text-body-line-height: 1.4;
-  --text-body-letter-spacing: 0.2px;
+  --text-body-letter-spacing: 0.013em;
 
-  --text-head-size: 22px;
+  --text-head-size: 1.375rem;
   --text-head-weight: 700;
   --text-head-line-height: 1.2;
-  --text-head-letter-spacing: 0px;
+  --text-head-letter-spacing: 0;
 
-  --text-footnote-size: 10px;
+  --text-footnote-size: 0.625rem;
 
   /* Spacing */
-  --space-16: 16px;
-  --space-24: 24px;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
 
   /* Border radii */
-  --radius-sm: 10px;
-  --radius-lg: 20px;
+  --radius-sm: 0.625rem;
+  --radius-lg: 1.25rem;
 
   /* Shadow Effects */
-  --shadow-y: 4px;
-  --shadow-blur: 4px;
+  --shadow-y: 0.25rem;
+  --shadow-blur: 0.25rem;
   --shadow-alpha: 25%;
+
+  --card-max-width: 20rem;
+  --card-shadow-y: 1.5625rem;
+  --card-shadow-blur: 1.5625rem;
 }
