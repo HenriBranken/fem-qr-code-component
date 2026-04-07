@@ -34,7 +34,6 @@ h3 {
     100%,
     var(--card-max-width)
   ); /*100% of available width of the parent.*/
-  /* width: 100%;  max-width: 320px; */
   background-color: var(--col-surface);
   display: flex;
   flex-direction: column;
@@ -75,14 +74,13 @@ h3 {
 
 .attribution {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 50%;
 
-  transform-origin: bottom left;
-  transform: rotate(90deg) translateX(-10px);
+  transform: translateX(-50%);
 
   font-size: var(--text-footnote-size);
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .attribution a {
@@ -97,5 +95,11 @@ h3 {
   h1,
   .card-text {
     text-shadow: none;
+  }
+}
+
+@media (max-height: 40.625rem) {
+  .attribution {
+    display: none;
   }
 }
